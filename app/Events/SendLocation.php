@@ -19,9 +19,10 @@ class SendLocation implements ShouldBroadcast
      */
     public $location;
 
-    public function __construct($location)
+    public function __construct($location, $channel = "konumlar")
     {
         $this->location = $location;
+        $tihs->channel = $channel;
     }
 
     /**
@@ -31,6 +32,6 @@ class SendLocation implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('location');
+        return new Channel($this->channel);
     }
 }
