@@ -22,7 +22,7 @@ class SendLocation implements ShouldBroadcast
     public function __construct($location, $channel = "konumlar")
     {
         $this->location = $location;
-        $tihs->channel = $channel;
+        $this->channel = $channel;
     }
 
     /**
