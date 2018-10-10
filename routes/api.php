@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+App\Events\SendPosition;
 
 /*
 |--------------------------------------------------------------------------
