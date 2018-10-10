@@ -23,6 +23,6 @@ Route::post('/map', function (Request $request) {
     $lat = $request->input('lat');
     $long = $request->input('long');
     $location = ["lat"=>$lat, "long"=>$long];
-    event(new SendLocation($location));
+    event(new SendLocation($location,'user-123456789-locations'));
     return response()->json(['status'=>'success', 'data'=>$location]);
 });
