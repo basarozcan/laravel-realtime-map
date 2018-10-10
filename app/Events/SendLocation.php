@@ -18,6 +18,7 @@ class SendLocation implements ShouldBroadcast
      * @return void
      */
     public $location;
+    public $channel;
 
     public function __construct($location, $channel = "konumlar")
     {
